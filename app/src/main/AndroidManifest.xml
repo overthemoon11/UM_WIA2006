@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+<<<<<<< HEAD
+=======
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+>>>>>>> 71e2c48 (Initial commit)
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -10,6 +15,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+<<<<<<< HEAD
         android:theme="@style/Theme.SAD"
         tools:targetApi="31">
         <activity
@@ -17,6 +23,21 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+=======
+        android:theme="@style/Theme.UniBus"
+        tools:targetApi="31">
+        <activity
+            android:name=".Report_LostItems"
+            android:exported="false" />
+        <activity
+            android:name=".Search_LostItems"
+            android:exported="false" />
+        <activity
+            android:name=".Post_LostItems"
+            android:exported="false" />
+        <activity
+            android:name=".LostItems"
+>>>>>>> 71e2c48 (Initial commit)
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

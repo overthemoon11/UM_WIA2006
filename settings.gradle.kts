@@ -13,5 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SAD"
+rootProject.name = "UniBus"
 include(":app")
+ 

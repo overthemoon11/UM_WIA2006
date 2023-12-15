@@ -1,7 +1,11 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">SAD</string>
     <string-array name="locations">
         <item>UM Central</item>
         <item>Muzium Negara</item>
     </string-array>
+=======
+    <string name="app_name">UniBus</string>
+>>>>>>> 71e2c48 (Initial commit)
 </resources>

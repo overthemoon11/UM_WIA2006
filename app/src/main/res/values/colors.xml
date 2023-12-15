@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <color name="transparent">#00FFFFFF</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
@@ -10,4 +11,8 @@
     <color name="lighterPurple">#F2F1FF</color>
     <color name="darkGrey">#6B6464</color>
     <color name="grey">#888888</color>
+=======
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+>>>>>>> 71e2c48 (Initial commit)
 </resources>
