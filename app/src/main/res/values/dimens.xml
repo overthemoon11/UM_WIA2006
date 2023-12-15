@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="square_size">144dp</dimen>
+        <dimen name="image_margin_left">20dp</dimen>
+        <dimen name="image_margin_top">7dp</dimen>
+
+
+
+
+</resources>
