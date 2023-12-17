@@ -1,19 +1,18 @@
 package com.example.unibus;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -89,17 +88,26 @@ public class Search_LostItems extends AppCompatActivity {
 
         itemRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         postLostItemAdapter = new PostLostItemAdapter(Search_LostItems.this, lostItemArrayList);
+        int spaceHeight = 30; // Replace with your desired spacing in pixels
+        // You can define this in your resources
+        itemRecyclerView.addItemDecoration(new CardViewSpaceItemDecoration(spaceHeight));
         itemRecyclerView.setAdapter(postLostItemAdapter);
         cannotFound = findViewById(R.id.cannotFound);
     }
 
     private void handleFirebaseData(DataSnapshot dataSnapshot) {
-        lostItemArrayList.clear();
+//        lostItemArrayList.clear();
+
         for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
             System.out.println(snapshot.getValue());
             PostedLostItem postedLostItem = snapshot.getValue(PostedLostItem.class);
-            lostItemArrayList.add(postedLostItem);
+
+            // Check if the item is already in the list before adding
+            if (!lostItemArrayList.contains(postedLostItem)) {
+                lostItemArrayList.add(postedLostItem);
+            }
         }
+
         postLostItemAdapter.notifyDataSetChanged();
     }
 

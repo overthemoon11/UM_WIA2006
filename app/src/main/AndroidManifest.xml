@@ -19,6 +19,7 @@
             android:exported="false" />
         <activity
             android:name=".Search_LostItems"
+            android:windowSoftInputMode="adjustPan"
             android:exported="false" />
         <activity
             android:name=".Post_LostItems"
