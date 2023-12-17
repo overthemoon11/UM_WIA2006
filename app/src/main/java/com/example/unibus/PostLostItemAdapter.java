@@ -4,19 +4,15 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.squareup.picasso.Picasso;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class PostLostItemAdapter extends RecyclerView.Adapter<PostLostItemAdapter.ViewHolder>{
+public class PostLostItemAdapter extends RecyclerView.Adapter<PostLostItemAdapter.ViewHolder> {
 
     private Context context;
     private ArrayList<PostedLostItem> postedItemList;
@@ -39,13 +35,16 @@ public class PostLostItemAdapter extends RecyclerView.Adapter<PostLostItemAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         PostedLostItem item = filteredList.get(position);
 
-        holder.locationShow.setText("Location: " +item.getLocation());
-        holder.dateShow.setText("Date: "+item.getDate());
-        holder.timeShow.setText("Time: "+item.getTime());
-        holder.itemShow.setText("Lost items: "+item.getItem());
-        holder.pointShow.setText("Collect Point: "+item.getPoint());
+        holder.locationShow.setText("Location: " + item.getLocation());
+        holder.dateShow.setText("Date: " + item.getDate());
+        holder.timeShow.setText("Time: " + item.getTime());
+        holder.itemShow.setText("Lost items: " + item.getItem());
+        holder.pointShow.setText("Collect Point: " + item.getPoint());
         holder.extraShow.setText(item.getExtra());
-        Picasso.get().load(item.getImageURl()).into(holder.lostItemImageList);
+
+        PostLostItemImageAdapter imageAdapter = new PostLostItemImageAdapter(context, item.getImageUrls());
+        holder.lostItemImageList.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
+        holder.lostItemImageList.setAdapter(imageAdapter);
     }
 
     @Override
@@ -66,7 +65,7 @@ public class PostLostItemAdapter extends RecyclerView.Adapter<PostLostItemAdapte
         TextView itemShow;
         TextView pointShow;
         TextView extraShow;
-        ImageView lostItemImageList;
+        RecyclerView lostItemImageList;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

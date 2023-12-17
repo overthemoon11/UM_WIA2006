@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Report_LostItems"
-    android:background="#F2F1FF">
+    android:background="#F2F1FF"
+    tools:context=".Report_LostItems">
 
     <TextView
         android:id="@+id/note"

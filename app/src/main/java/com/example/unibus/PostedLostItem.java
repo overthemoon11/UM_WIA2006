@@ -1,5 +1,7 @@
 package com.example.unibus;
 
+import java.util.List;
+
 public class PostedLostItem {
     private String location;
     private String date;
@@ -7,14 +9,14 @@ public class PostedLostItem {
     private String item;
     private String point;
     private String extra;
-    private String imageURl;
+    private List<String> imageUrls;
 
-    public String getImageURl() {
-        return imageURl;
+    public List<String> getImageUrls() {
+        return imageUrls;
     }
 
-    public void setImageURl(String imageURl) {
-        this.imageURl = imageURl;
+    public void setImageUrls(List<String> imageUrls) {
+        this.imageUrls = imageUrls;
     }
 
     public String getLocation() {
@@ -68,8 +70,8 @@ public class PostedLostItem {
     public PostedLostItem() {
     }
 
-    public PostedLostItem(String imageURL, String location, String date, String time, String item, String point, String extra) {
-        this.imageURl = imageURL;
+    public PostedLostItem(List<String> imageUrls, String location, String date, String time, String item, String point, String extra) {
+        this.imageUrls = imageUrls;
         this.location = location;
         this.date = date;
         this.time = time;
