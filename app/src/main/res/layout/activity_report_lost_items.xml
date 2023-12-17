@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,25 +16,23 @@
         android:text="Note: We will contact you upon have any further information about your lost items"
         android:textColor="#8577B2"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2"
-        app:layout_constraintVertical_bias="0.066" />
+        android:layout_below="@+id/reportEditExtra"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="130dp" />
 
     <View
         android:id="@+id/view2"
-        android:layout_width="364dp"
-        android:layout_height="436dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
         android:background="@drawable/purple_outline"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInstruction2"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_below="@id/textInstruction2"
+        android:layout_alignBottom="@+id/note"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginHorizontal="20dp" />
 
     <EditText
         android:id="@+id/reportEditTime"
@@ -44,12 +43,9 @@
         android:hint="eg 8.30 pm"
         android:inputType="time"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.155"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.348" />
+        android:layout_below="@+id/time2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp" />
 
     <TextView
         android:id="@+id/time2"
@@ -58,12 +54,10 @@
         android:text="Time you lost your items:"
         android:textColor="#272464"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.327" />
+        android:layout_below="@+id/reportEditDate"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp" />
 
     <EditText
         android:id="@+id/reportEditLocation"
@@ -74,12 +68,9 @@
         android:hint="eg UM Central"
         android:inputType="text"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.134"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216" />
+        android:layout_below="@+id/location2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp" />
 
     <EditText
         android:id="@+id/reportEditContact"
@@ -90,12 +81,9 @@
         android:hint="UM bus management office / Self pick-up with me"
         android:inputType="text"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.155"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.474" />
+        android:layout_below="@+id/contact"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp" />
 
     <TextView
         android:id="@+id/contact"
@@ -104,12 +92,10 @@
         android:text="Your contact no :"
         android:textColor="#272464"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.453" />
+        android:layout_below="@+id/reportEditItem"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp" />
 
     <EditText
         android:id="@+id/reportEditDate"
@@ -120,24 +106,19 @@
         android:hint="eg 2/9/2023"
         android:inputType="date"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.155"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.284" />
+        android:layout_below="@+id/date2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp" />
 
     <TextView
         android:id="@+id/textInstruction2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Please fill in the following details: "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.115"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.145" />
+        android:layout_below="@+id/topReportLostItems"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"/>
 
     <EditText
         android:id="@+id/reportEditExtra"
@@ -148,12 +129,10 @@
         android:hint="Add other additional informations (if have)"
         android:inputType="text"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.552" />
+        android:layout_below="@+id/reportEditContact"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="30dp" />
 
     <TextView
         android:id="@+id/date2"
@@ -162,12 +141,10 @@
         android:text="Date you lost your items:"
         android:textColor="#272464"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.149"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.263" />
+        android:layout_below="@+id/reportEditLocation"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:id="@+id/item2"
@@ -176,12 +153,10 @@
         android:text="Lost items :"
         android:textColor="#272464"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39" />
+        android:layout_below="@+id/reportEditTime"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:id="@+id/location2"
@@ -190,12 +165,10 @@
         android:text="Where you lost your items :"
         android:textColor="#272464"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.194" />
+        android:layout_below="@id/textInstruction2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="18dp" />
 
     <EditText
         android:id="@+id/reportEditItem"
@@ -206,12 +179,9 @@
         android:hint="eg Student Card, wireless earphone"
         android:inputType="text"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.411" />
+        android:layout_below="@+id/item2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp" />
 
     <Button
         android:id="@+id/submitReportButton"
@@ -219,35 +189,30 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#272464"
         android:text="Submit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/note"
-        app:layout_constraintVertical_bias="0.148" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"/>
 
     <ImageView
         android:id="@+id/topReportLostItems"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:adjustViewBounds="true"
         app:srcCompat="@drawable/top_report" />
 
     <ImageButton
         android:id="@+id/reportBackMain"
-        android:layout_width="57dp"
-        android:layout_height="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-13dp"
+        android:layout_marginStart="-15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@id/topReportLostItems"
         app:srcCompat="@drawable/back_button" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
