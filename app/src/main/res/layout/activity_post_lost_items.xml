@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,14 +10,12 @@
 
     <ImageView
         android:id="@+id/topPostLostItems"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:adjustViewBounds="true"
         app:srcCompat="@drawable/top_post" />
 
     <Button
@@ -25,25 +24,24 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#272464"
         android:text="Post"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.486" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+         />
 
     <View
         android:id="@+id/view"
-        android:layout_width="364dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
         android:background="@drawable/purple_outline"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInstruction"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_below="@id/textInstruction"
+        android:layout_above="@+id/submitPostButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginHorizontal="20dp"
+        />
 
     <EditText
         android:id="@+id/postEditLocation"
@@ -54,12 +52,9 @@
         android:hint="eg UM Central"
         android:inputType="text"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.134"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/location"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_below="@+id/location"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"/>
 
     <EditText
         android:id="@+id/postEditItem"
@@ -70,12 +65,9 @@
         android:hint="eg Student Card, wireless earphone"
         android:inputType="text"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_below="@+id/item"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp" />
 
     <EditText
         android:id="@+id/postEditTime"
@@ -86,12 +78,9 @@
         android:hint="eg 8.30 pm"
         android:inputType="text"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_below="@+id/time"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp" />
 
     <EditText
         android:id="@+id/postEditPoint"
@@ -102,12 +91,9 @@
         android:hint="UM bus management office / Self pick-up with me"
         android:inputType="text"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/point"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_below="@+id/point"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp" />
 
     <EditText
         android:id="@+id/postEditExtra"
@@ -118,12 +104,10 @@
         android:hint="Add other additional informations (your phone no or whatsapp if you wish to have a self pick-up with the owners)"
         android:inputType="text"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postEditPoint"
-        app:layout_constraintVertical_bias="0.159" />
+        android:layout_below="@+id/postEditPoint"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="30dp"/>
 
     <EditText
         android:id="@+id/postEditDate"
@@ -134,65 +118,65 @@
         android:hint="eg 2/9/2023"
         android:inputType="date"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_below="@+id/date"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/topPostLostItems"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="10dp">
 
     <ImageButton
         android:id="@+id/selectImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="15dp"
         android:backgroundTint="@android:color/transparent"
         android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInstruction"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topPostLostItems"
-        app:layout_constraintVertical_bias="0.645"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/add_image" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/imageRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInstruction"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_default="wrap"
         app:layout_constraintStart_toEndOf="@+id/selectImageButton"
-        app:layout_constraintTop_toBottomOf="@+id/topPostLostItems"
-        app:layout_constraintVertical_bias="0.6"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginEnd="20dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageButton
         android:id="@+id/postBackMain"
-        android:layout_width="57dp"
-        android:layout_height="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-13dp"
+        android:layout_marginStart="-15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@id/topPostLostItems"
         app:srcCompat="@drawable/back_button" />
 
     <TextView
         android:id="@+id/textInstruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
         android:text="Please fill in the following details: "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.115"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topPostLostItems"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_below="@+id/constraintView1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"/>
 
     <TextView
         android:id="@+id/location"
@@ -201,27 +185,22 @@
         android:text="Location(where you found that lost items) :"
         android:textColor="#272464"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.016" />
+        android:layout_below="@id/textInstruction"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="18dp"/>
 
     <TextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
         android:text="Date you found the lost items:"
         android:textColor="#272464"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.172"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postEditLocation"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_below="@+id/postEditLocation"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"/>
 
     <TextView
         android:id="@+id/time"
@@ -230,12 +209,10 @@
         android:text="Time you found the lost items:"
         android:textColor="#272464"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postEditDate"
-        app:layout_constraintVertical_bias="0.046" />
+        android:layout_below="@+id/postEditDate"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"/>
 
     <TextView
         android:id="@+id/item"
@@ -244,27 +221,22 @@
         android:text="Lost items :"
         android:textColor="#272464"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postEditTime"
-        app:layout_constraintVertical_bias="0.05" />
+        android:layout_below="@+id/postEditTime"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:id="@+id/point"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:text="Collection point:"
         android:textColor="#272464"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.129"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postEditItem"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_below="@+id/postEditItem"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

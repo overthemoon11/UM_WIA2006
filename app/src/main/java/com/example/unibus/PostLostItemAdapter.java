@@ -44,7 +44,7 @@ public class PostLostItemAdapter extends RecyclerView.Adapter<PostLostItemAdapte
 
         PostLostItemImageAdapter imageAdapter = new PostLostItemImageAdapter(context, item.getImageUrls());
         holder.lostItemImageList.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
-        int horizontalSpaceWidth = 30; // Replace with your desired horizontal spacing in pixels
+        int horizontalSpaceWidth = 20; // Replace with your desired horizontal spacing in pixels
         holder.lostItemImageList.addItemDecoration(new HorizontalSpaceItemDecoration(horizontalSpaceWidth));
         holder.lostItemImageList.setAdapter(imageAdapter);
     }

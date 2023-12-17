@@ -48,7 +48,7 @@ public class Post_LostItems extends AppCompatActivity {
 
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        int horizontalSpaceWidth = 30; // Replace with your desired horizontal spacing in pixels
+        int horizontalSpaceWidth = 20; // Replace with your desired horizontal spacing in pixels
         recyclerView.addItemDecoration(new HorizontalSpaceItemDecoration(horizontalSpaceWidth));
         recyclerView.setAdapter(imageAdapter);
         recyclerView.setLayoutManager(layoutManager);
