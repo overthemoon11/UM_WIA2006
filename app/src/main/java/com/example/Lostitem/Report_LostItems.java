@@ -1,4 +1,4 @@
-package com.example.unibus;
+package com.example.Lostitem;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.unibus.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -67,7 +68,7 @@ public class Report_LostItems extends AppCompatActivity {
 
     private void setupBackButtons() {
         reportBackMain = findViewById(R.id.reportBackMain);
-        reportBackMain.setOnClickListener(v -> startActivities(new Intent[]{new Intent(Report_LostItems.this, LostItems.class)}));
+        reportBackMain.setOnClickListener(v -> onBackPressed());
     }
 
     private void saveLostItemToFirebase(String location, String date, String time, String item, String contact, String extra) {

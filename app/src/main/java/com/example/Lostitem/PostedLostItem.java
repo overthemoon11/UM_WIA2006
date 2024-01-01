@@ -1,12 +1,23 @@
-package com.example.unibus;
+package com.example.Lostitem;
 
-public class ReportedLostItem {
+import java.util.List;
+
+public class PostedLostItem {
     private String location;
     private String date;
     private String time;
     private String item;
-    private String contact;
+    private String point;
     private String extra;
+    private List<String> imageUrls;
+
+    public List<String> getImageUrls() {
+        return imageUrls;
+    }
+
+    public void setImageUrls(List<String> imageUrls) {
+        this.imageUrls = imageUrls;
+    }
 
     public String getLocation() {
         return location;
@@ -40,12 +51,12 @@ public class ReportedLostItem {
         this.item = item;
     }
 
-    public String getContact() {
-        return contact;
+    public String getPoint() {
+        return point;
     }
 
-    public void setContact(String contact) {
-        this.contact = contact;
+    public void setPoint(String point) {
+        this.point = point;
     }
 
     public String getExtra() {
@@ -56,15 +67,16 @@ public class ReportedLostItem {
         this.extra = extra;
     }
 
-    public ReportedLostItem() {
+    public PostedLostItem() {
     }
 
-    public ReportedLostItem(String location, String date, String time, String item, String contact, String extra) {
+    public PostedLostItem(List<String> imageUrls, String location, String date, String time, String item, String point, String extra) {
+        this.imageUrls = imageUrls;
         this.location = location;
         this.date = date;
         this.time = time;
         this.item = item;
-        this.contact = contact;
+        this.point = point;
         this.extra = extra;
     }
 }

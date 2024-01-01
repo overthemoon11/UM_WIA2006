@@ -1,4 +1,4 @@
-package com.example.unibus;
+package com.example.Lostitem;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.unibus.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -152,6 +153,6 @@ public class Search_LostItems extends AppCompatActivity {
 
     private void setupBackButtons() {
         searchBackMain = findViewById(R.id.searchBackMain);
-        searchBackMain.setOnClickListener(v -> startActivities(new Intent[]{new Intent(Search_LostItems.this, LostItems.class)}));
+        searchBackMain.setOnClickListener(v -> onBackPressed());
     }
 }

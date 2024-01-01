@@ -1,4 +1,4 @@
-package com.example.unibus;
+package com.example.Reservation;
 
 import org.junit.Test;
 

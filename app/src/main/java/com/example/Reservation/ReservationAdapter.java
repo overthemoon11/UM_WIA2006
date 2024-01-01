@@ -1,4 +1,4 @@
-package com.example.sad;
+package com.example.Reservation;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,7 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.sad.Models.Reservation;
+import com.example.Reservation.Models.Reservation;
+import com.example.unibus.R;
 
 import java.util.List;
 

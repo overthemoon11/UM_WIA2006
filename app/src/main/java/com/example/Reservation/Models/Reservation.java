@@ -1,4 +1,4 @@
-package com.example.sad.Models;
+package com.example.Reservation.Models;
 
 public class Reservation {
     private String id, from , to , date , purpose;

@@ -1,7 +1,4 @@
-package com.example.sad;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.Reservation;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -11,14 +8,19 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.sad.Models.Reservation;
-import com.example.sad.Utils.FirebaseUtils;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.Reservation.Models.Reservation;
+import com.example.Reservation.Utils.FirebaseUtils;
+import com.example.unibus.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
@@ -31,6 +33,7 @@ public class ReservationPage extends AppCompatActivity implements DatePickerDial
     private int busNeeded;
     private TextView date;
     private Button confirmReservation;
+    private ImageButton BtnBack;
     private RadioGridGroup busRadioGroup;
     private RadioGroup purposeRadioGroup;
     private RadioButton radioOne , radioTwo , radioThree , radioFour , radioFive , radioSix , purposeRadio;
@@ -51,6 +54,9 @@ public class ReservationPage extends AppCompatActivity implements DatePickerDial
         radioFour = findViewById(R.id.radioFour);
         radioFive = findViewById(R.id.radioFive);
         radioSix = findViewById(R.id.radioSix);
+        BtnBack = findViewById(R.id.reservationsPageBack);
+        BtnBack.setOnClickListener(v -> onBackPressed());
+
 
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.locations , R.layout.spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

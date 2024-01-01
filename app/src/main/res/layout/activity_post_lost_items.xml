@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F2F1FF"
-    tools:context=".Post_LostItems">
+    tools:context="com.example.Lostitem.Post_LostItems">
 
     <ImageView
         android:id="@+id/topPostLostItems"
@@ -15,7 +15,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:adjustViewBounds="true"
         app:srcCompat="@drawable/top_post" />
 
     <Button

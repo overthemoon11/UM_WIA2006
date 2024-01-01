@@ -1,21 +1,21 @@
-package com.example.sad;
+package com.example.Reservation;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-
-import com.example.sad.Models.Reservation;
-import com.example.sad.Utils.EventListeners;
-import com.example.sad.Utils.FirebaseUtils;
+import com.example.Lostitem.LostItems;
+import com.example.Reservation.Models.Reservation;
+import com.example.Reservation.Utils.FirebaseUtils;
+import com.example.unibus.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentChange;
@@ -98,6 +98,10 @@ public class MainActivity extends AppCompatActivity {
 
         reservationNav.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this , ReservationPage.class));
+        });
+
+        lostItemNav.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this , LostItems.class));
         });
     }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReservationPage">
+    tools:context="com.example.Reservation.ReservationPage">
 
     <RelativeLayout
         android:id="@+id/relativeLayout2"
@@ -129,7 +129,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout4" />
 
-    <com.example.sad.RadioGridGroup
+    <com.example.Reservation.RadioGridGroup
         android:id="@+id/reservationsPageBusRadio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -211,7 +211,7 @@
                 android:textAlignment="center" />
         </TableRow>
 
-    </com.example.sad.RadioGridGroup>
+    </com.example.Reservation.RadioGridGroup>
 
 <!--    <RadioGroup-->
 <!--        android:id="@+id/reservationsPageBusRadio"-->

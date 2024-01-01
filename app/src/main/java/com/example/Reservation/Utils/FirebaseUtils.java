@@ -1,4 +1,4 @@
-package com.example.sad.Utils;
+package com.example.Reservation.Utils;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;

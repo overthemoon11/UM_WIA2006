@@ -1,4 +1,4 @@
-package com.example.unibus;
+package com.example.Lostitem;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.unibus.R;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -90,7 +91,7 @@ public class Post_LostItems extends AppCompatActivity {
 
     private void setupBackButton() {
         ImageButton postBackMain = findViewById(R.id.postBackMain);
-        postBackMain.setOnClickListener(v -> startActivity(new Intent(Post_LostItems.this, LostItems.class)));
+        postBackMain.setOnClickListener(v -> onBackPressed());
     }
 
     private void submitPost() {
