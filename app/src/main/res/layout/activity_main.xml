@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/lighterPurple">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_circular_border"
+        android:padding="20dp"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/landingPageGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good Morning"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/unibus_menu"
+            android:layout_below="@id/landingPageGreeting"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circular_border"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <ImageView
+            android:id="@+id/landingPageClock"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/history"
+            app:tint="@color/darkPurple" />
+
+        <TextView
+            android:id="@+id/landingPageYourActivities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/landingPageClock"
+            android:layout_alignBottom="@id/landingPageClock"
+            android:layout_toRightOf="@id/landingPageClock"
+            android:gravity="center_vertical"
+            android:text="Your Activities"
+            android:textColor="@color/darkPurple" />
+
+        <View
+            android:id="@+id/landingPageLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_below="@id/landingPageYourActivities"
+            android:layout_marginTop="5dp"
+            android:background="@color/lightPurple" />
+
+        <TextView
+            android:id="@+id/landingPageReservationsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/landingPageLine1"
+            android:layout_marginTop="20dp"
+            android:text="Bus Reservation"
+            android:textColor="@color/darkPurple" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/landingPageReservationsRecView"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_below="@id/landingPageReservationsTitle"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/landingPageReservations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/landingPageReservationsTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="20dp"
+            android:text="No reservations yet..."
+            android:textColor="@color/purple" />
+
+        <View
+            android:id="@+id/landingPageLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_below="@id/landingPageReservations"
+            android:layout_marginTop="5dp"
+            android:background="@color/lightPurple" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/landingPageLine2"
+            android:layout_marginTop="20dp"
+            android:text="Route Planning"
+            android:textColor="@color/darkPurple" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/top_circular_border"
+        android:backgroundTint="@color/pastelPurple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="5dp"
+        tools:layout_editor_absoluteX="20dp">
+
+        <LinearLayout
+            android:id="@+id/navToReservation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/bus_reservation" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Bus\nReservation" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navToRoutePlanning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/route_planning" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Route\nPlanning" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navToLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/real_time_location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Real Time\nLocation" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navToLostItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/lost_item" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Lost\nItem" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navToFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/feeback_rating" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Feedback &amp;\nRating" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

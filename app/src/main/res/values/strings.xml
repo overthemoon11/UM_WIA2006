@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SAD</string>
+    <string-array name="locations">
+        <item>UM Central</item>
+        <item>Muzium Negara</item>
+    </string-array>
+</resources>

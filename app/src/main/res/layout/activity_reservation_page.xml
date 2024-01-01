@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReservationPage">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/reservationsPageBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_ios_back"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="50dp"
+            android:layout_toEndOf="@id/reservationsPageBack"
+            android:text="BUS RESERVATION"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/circular_border"
+        android:backgroundTint="@color/lighterPurple"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+        <TextView
+            android:id="@+id/reservationsPageFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From"
+            android:textColor="@color/darkGrey" />
+
+        <Spinner
+            android:id="@+id/reservationsPageFromSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reservationsPageFrom"
+            android:layout_marginTop="5dp" />
+
+        <View
+            android:id="@+id/reservationsPageLine1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/reservationsPageFromSpinner"
+            android:layout_marginVertical="10dp"
+            android:background="@color/grey" />
+
+        <TextView
+            android:id="@+id/reservationsPageTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reservationsPageLine1"
+            android:text="To"
+            android:textColor="@color/darkGrey" />
+
+        <Spinner
+            android:id="@+id/reservationsPageToSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reservationsPageTo"
+            android:layout_marginTop="5dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/circular_border"
+        android:backgroundTint="@color/lighterPurple"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose your trip date"
+            android:textColor="@color/darkPurple" />
+
+        <TextView
+            android:id="@+id/reservationsPageDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Calendar Date"
+            android:textColor="@color/darkPurple" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="20dp"
+        android:text="How many bus needed?"
+        android:textColor="@color/darkPurple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4" />
+
+    <com.example.sad.RadioGridGroup
+        android:id="@+id/reservationsPageBusRadio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <TableRow android:layout_marginTop="5dp">
+
+            <RadioButton
+                android:id="@+id/radioOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@color/transparent"
+                android:text="1"
+                android:textAlignment="center" />
+
+            <RadioButton
+                android:id="@+id/radioTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@color/transparent"
+                android:text="2"
+                android:textAlignment="center" />
+
+            <RadioButton
+                android:id="@+id/radioThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@color/transparent"
+                android:text="3"
+                android:textAlignment="center" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="5dp">
+
+            <RadioButton
+                android:id="@+id/radioFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@color/transparent"
+                android:text="4"
+                android:textAlignment="center" />
+
+            <RadioButton
+                android:id="@+id/radioFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@color/transparent"
+                android:text="5"
+                android:textAlignment="center" />
+
+            <RadioButton
+                android:id="@+id/radioSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@color/transparent"
+                android:text="6"
+                android:textAlignment="center" />
+        </TableRow>
+
+    </com.example.sad.RadioGridGroup>
+
+<!--    <RadioGroup-->
+<!--        android:id="@+id/reservationsPageBusRadio"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="30dp"-->
+<!--        android:layout_marginVertical="10dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView2">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:padding="5dp">-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/radioOne"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="5dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/radio_selector"-->
+<!--                android:button="@color/transparent"-->
+<!--                android:text="1"-->
+<!--                android:onClick="busNumberCheck"-->
+<!--                android:textAlignment="center" />-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/radioTwo"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="5dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/radio_selector"-->
+<!--                android:button="@color/transparent"-->
+<!--                android:text="2"-->
+<!--                android:onClick="busNumberCheck"-->
+<!--                android:textAlignment="center" />-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/radioThree"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="5dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/radio_selector"-->
+<!--                android:button="@color/transparent"-->
+<!--                android:text="3"-->
+<!--                android:onClick="busNumberCheck"-->
+<!--                android:textAlignment="center" />-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:padding="5dp">-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/radioFour"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="5dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/radio_selector"-->
+<!--                android:button="@color/transparent"-->
+<!--                android:text="4"-->
+<!--                android:onClick="busNumberCheck"-->
+<!--                android:textAlignment="center" />-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/radioFive"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="5dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/radio_selector"-->
+<!--                android:button="@color/transparent"-->
+<!--                android:text="5"-->
+<!--                android:onClick="busNumberCheck"-->
+<!--                android:textAlignment="center" />-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/radioSix"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="5dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/radio_selector"-->
+<!--                android:button="@color/transparent"-->
+<!--                android:text="6"-->
+<!--                android:onClick="busNumberCheck"-->
+<!--                android:textAlignment="center" />-->
+<!--        </LinearLayout>-->
+
+<!--    </RadioGroup>-->
+
+    <TextView
+        android:id="@+id/reservationsPagePurposeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Purpose of Booking"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reservationsPageBusRadio" />
+
+    <RadioGroup
+        android:id="@+id/reservationsPagePurposeRadio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="10dp"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reservationsPagePurposeTitle">
+
+            <RadioButton
+                android:id="@+id/radioTrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@color/transparent"
+                android:text="Trip"
+                android:onClick="purposeCheck"
+                android:textAlignment="center" />
+
+            <RadioButton
+                android:id="@+id/radioComp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@color/transparent"
+                android:text="Competition"
+                android:onClick="purposeCheck"
+                android:textAlignment="center" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/reservationsPageConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circular_border"
+        android:text="CONFIRM RESERVATION"
+        app:backgroundTint="@color/darkPurple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reservationsPagePurposeRadio" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

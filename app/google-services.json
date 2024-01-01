@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "813932064422",
+    "project_id": "sad-assignment",
+    "storage_bucket": "sad-assignment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813932064422:android:bb1ece51476592e4c70e67",
+        "android_client_info": {
+          "package_name": "com.example.sad"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-mIwUefZIEyaDhNCcD3tYxkKjlIojWfg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
